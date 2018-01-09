@@ -27,7 +27,7 @@ class NavigatorWatcher:
         options.update(kwargs)
         self._client = client
         self._ignoreHTTPSErrors = ignoreHTTPSErrors
-        self._timeout = options.get('timeout', 3000)
+        self._timeout = options.get('timeout', 30000)
         self._idleTime = options.get('networkIdleTimeout', 1000)
         self._idleTimer: Optional[Union[asyncio.Future, asyncio.Handle]] = None
         self._idleInflight = options.get('networkIdleInflight', 2)
